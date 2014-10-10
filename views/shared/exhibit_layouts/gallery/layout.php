@@ -21,7 +21,13 @@ $captionPosition = isset($options['captions-position'])
     ?>
 </div>
 <?php endif; ?>
-<div class="gallery<?php if ($showcaseFile || !empty($text)) echo " with-showcase $galleryPosition"; echo " captions-$captionPosition"; ?>">
+<div class="gallery<?php
+    if ($showcaseFile || !empty($text)):
+        echo " with-showcase $galleryPosition";
+    elseif ($galleryPosition == 'center'):
+        echo " $galleryPosition";
+    endif;
+    echo ' captions-' . $captionPosition; ?>">
     <?php echo $this->exhibitAttachmentGallery($attachments, array('imageSize' => $galleryFileSize)); ?>
 </div>
 <?php echo $text; ?>

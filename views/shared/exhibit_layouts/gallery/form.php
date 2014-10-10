@@ -26,7 +26,8 @@ $options = $block->getOptions();
             array(
                 'none' => __('No showcase file'),
                 'left' => __('Left'),
-                'right' => __('Right')
+                'center' => __('Center'),
+                'right' => __('Right'),
             )
         );
         ?>
@@ -40,7 +41,8 @@ $options = $block->getOptions();
             @$options['gallery-position'], array(),
             array(
                 'left' => __('Left'),
-                'right' => __('Right')
+                'center' => __('Center'),
+                'right' => __('Right'),
             )
         );
         ?>
@@ -58,7 +60,7 @@ $options = $block->getOptions();
             ));
         ?>
     </div>
-    
+
     <div class="captions-position">
         <?php echo $this->formLabel($formStem . '[options][captions-position]', __('Captions position')); ?>
         <?php
@@ -67,7 +69,7 @@ $options = $block->getOptions();
             array(
                 'center' => __('Center'),
                 'left' => __('Left'),
-                'right' => __('Right')
+                'right' => __('Right'),
             ));
         ?>
     </div>
