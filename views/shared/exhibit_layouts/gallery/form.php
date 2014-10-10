@@ -30,6 +30,7 @@ $options = $block->getOptions();
             )
         );
         ?>
+        <p class="instructions"><?php echo __('If set, the showcase file will be the first attached item. Next ones will be used for gallery.'); ?></p>
     </div>
 
     <div class="gallery-position">
